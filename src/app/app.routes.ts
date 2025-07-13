@@ -5,6 +5,7 @@ import Layout from '../pages/layout/layout';
 import Home from '../pages/home/home';
 import Products from '../pages/products/products';
 import ProductsCreate from '../pages/products/products-create/products-create';
+import { Todo } from '../pages/todo/todo';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,11 @@ export const routes: Routes = [
         path: '',
         // loadComponent: () => import('../pages/home/home'),
         component: Home,
+      },
+      {
+        path: 'todo',
+        // loadComponent: () => import('../pages/home/home'),
+        component: Todo,
       },
       {
         path: 'products',
