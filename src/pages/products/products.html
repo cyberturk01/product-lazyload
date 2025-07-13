@@ -1,0 +1,9 @@
+<ul>
+  @for (item of todos; track item) {
+
+  <li>
+    {{ item.title }}
+    <button [routerLink]="['details/', item.id]">Details</button>
+  </li>
+  }
+</ul>
