@@ -1,0 +1,52 @@
+<h1>Todo App</h1>
+@if (!isUpdated) {
+<div>
+  <label>Work</label>
+  <br />
+  <input type="text" [(ngModel)]="work" />
+  <button (click)="save()">Save</button>
+</div>
+}@else{
+<div>
+  <label>Update Work</label>
+  <br />
+  <input type="text" [(ngModel)]="updateWork" />
+  <button (click)="update()">Update</button>
+</div>
+}
+
+<hr />
+<div>
+  <input
+    type="search"
+    [(ngModel)]="search"
+    placeholder="{{ searchSomething | titlecase | lowercase }}"
+  />
+  <!-- <ul>
+    @for (item of todos | todo:search ; track item) {
+    <li>
+      {{ item.work }}
+      @if (!isUpdated) {
+      <button (click)="get($index)">Update</button>
+      <button (click)="delete($index)">Delete</button>
+      }
+      {{ getDate() | date : "dd.MM.yyy HH:mm" }}
+      {{ price | currency : "EUR" }}
+    </li>
+    }
+  </ul> -->
+  <ul>
+    @for (item of todos ; track item) {
+    <li>
+      {{ item.work }}
+      @if (!isUpdated) {
+      <button (click)="get($index)">Update</button>
+      <button (click)="delete($index)">Delete</button>
+      }
+      {{ item.date | date : "dd.MM.yyyy HH:mm" }}
+      {{ item.price | currency : "EUR" }}
+      {{ item.work }}
+    </li>
+    }
+  </ul>
+</div>
