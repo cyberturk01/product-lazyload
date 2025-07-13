@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TodoPipe } from '../todo-pipe';
 
 @Component({
   selector: 'app-todo',
-  imports: [FormsModule, CommonModule, TodoPipe],
+  imports: [FormsModule, CommonModule],
   templateUrl: './todo.html',
   styleUrl: './todo.css',
 })
