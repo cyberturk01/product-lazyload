@@ -6,6 +6,7 @@ import Home from '../pages/home/home';
 import Products from '../pages/products/products';
 import ProductsCreate from '../pages/products/products-create/products-create';
 import { Todo } from '../pages/todo/todo';
+import { Personal } from '../pages/personal/personal';
 
 export const routes: Routes = [
   {
@@ -20,8 +21,13 @@ export const routes: Routes = [
       },
       {
         path: 'todo',
-        // loadComponent: () => import('../pages/home/home'),
+        // loadComponent: () => import('../pages/todo/todo'),
         component: Todo,
+      },
+      {
+        path: 'personal',
+        // loadComponent: () => import('../pages/personal/personal'),
+        component: Personal,
       },
       {
         path: 'products',
