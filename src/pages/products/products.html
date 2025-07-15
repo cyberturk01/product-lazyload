@@ -1,9 +1,16 @@
+@if(error()){
+{{ error() }}
+} @if(loading()){
+<p>Loading...</p>
+}@else {
 <ul>
-  @for (item of todos; track item) {
-
+  <button (click)="result.reload()">Reload</button>
+  @for (item of todos(); track item) {
   <li>
     {{ item.title }}
     <button [routerLink]="['details/', item.id]" type="submit">Details</button>
   </li>
   }
 </ul>
+
+}
